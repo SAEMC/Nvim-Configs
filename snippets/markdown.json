@@ -1,0 +1,17 @@
+{
+  "init": {
+    "prefix": "init",
+    "body": "\n---\nhide:\n  - footer\n---\n\n$0",
+    "description": "Put the hide information."
+  },
+  "br": {
+    "prefix": "br",
+    "body": "\n\n<br/>\n$0",
+    "description": "Put a `<br/>`."
+  },
+  "img": {
+    "prefix": "img",
+    "body": "\n\n<figure markdown>\n  ![](){ load=lazy }\n</figure>\n$0",
+    "description": "Put a `![](){ load=lazy width=100% }`."
+  }
+}

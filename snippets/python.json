@@ -1,0 +1,12 @@
+{
+  "info": {
+    "prefix": "info",
+    "body": "\n# -*- coding: utf-8 -*-\n# Author: SAEMC\n# Date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}\n\n$0",
+    "description": "Put the info of encoding/author/date."
+  },
+  "main": {
+    "prefix": "main",
+    "body": "\ndef main():\n    ${1:}\n\n    pass\n\n\nif __name__ == \"__main__\":\n    main()$0",
+    "description": "Code snippet for a `if __name__ == \"__main__\": ...` block\nwith a `main` function."
+  }
+}
