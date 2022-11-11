@@ -16,6 +16,7 @@ local sources = {
   b.formatting.fixjson,
   b.formatting.markdownlint,
   b.formatting.prettier,
+  b.formatting.shfmt,
   b.formatting.stylua,
 }
 

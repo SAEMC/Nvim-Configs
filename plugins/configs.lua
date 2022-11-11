@@ -32,6 +32,7 @@ M.mason = {
     "fixjson",
     "markdownlint",
     "prettier",
+    "shfmt",
     "stylua",
   },
 }
