@@ -25,6 +25,6 @@ local options = {
     require("core.utils").load_mappings("gitsigns", { buffer = bufnr })
   end,
 }
-
+test = "test"
 options = require("core.utils").load_override(options, "lewis6991/gitsigns.nvim")
 gitsigns.setup(options)
