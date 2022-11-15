@@ -12,11 +12,12 @@ require("base46").load_highlight "git"
 
 local options = {
   signs = {
-    add = { hl = "DiffAdd", text = "│", numhl = "GitSignsAddNr" },
-    change = { hl = "DiffChange", text = "│", numhl = "GitSignsChangeNr" },
-    delete = { hl = "DiffDelete", text = "", numhl = "GitSignsDeleteNr" },
-    topdelete = { hl = "DiffDelete", text = "‾", numhl = "GitSignsDeleteNr" },
-    changedelete = { hl = "DiffChangeDelete", text = "~", numhl = "GitSignsChangeNr" },
+    add = { hl = "GitSignsAdd", text = "+", numhl = "GitSignsAddNr" },
+    change = { hl = "GitSignsChange", text = "~", numhl = "GitSignsChangeNr" },
+    changedelete = { hl = "GitSignsChange", text = "~", numhl = "GitSignsChangeNr" },
+    delete = { hl = "GitSignsDelete", text = "-", numhl = "GitSignsDeleteNr" },
+    topdelete = { hl = "GitSignsDelete", text = "-", numhl = "GitSignsDeleteNr" },
+    untracked = { hl = "GitSignsAdd", text = "?", numhl = "GitSignsAddNr" },
   },
   numhl = true,
   current_line_blame = true,
