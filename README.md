@@ -82,7 +82,7 @@ cd ./Nvim-Configs && \
 - [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim) (is for formatting entire codes of current file on save)
 - [nvim-scrollview](https://github.com/dstein64/nvim-scrollview) (is for displaying interactive vertical scrollbars)
 - [nvim-osc52](https://github.com/ojroques/nvim-osc52) (is for yanking codes into system clipboard)
-- [vim-surround](https://github.com/tpope/vim-surround) (is for surrounding codes with a pair of special characters: `''`, `""`, `()`, `{}`, `[]`, etc.)
+- [vim-surround](https://github.com/tpope/vim-surround) (is for surrounding codes with a pair of special characters: `''`, `""`, `()`, `{}`, `[]`, and etc.)
 
 ```shell
 nvim +PackerSync
@@ -90,7 +90,7 @@ nvim +PackerSync
 
 ### Apply [Mason](https://github.com/williamboman/mason.nvim) configs
 
-> Unable to install LSP -> Check dependencies such as `npm`, `go`, and etc
+> Unable to install LSP -> Check dependencies such as `npm`, `go`, and etc.
 
 ```shell
 nvim +MasonInstallAll
