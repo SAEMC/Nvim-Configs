@@ -61,7 +61,7 @@ source ~/.bashrc
 source ~/.zshrc
 ```
 
-### (Optional) Install from source code to NvChad in Docker at once
+### (Optional) Install from bottom to NvChad in Docker at once
 
 ```shell
 apt-get update && apt-get install -y sudo git && \
