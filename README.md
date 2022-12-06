@@ -9,14 +9,14 @@
 - Ubuntu >= 20.04 LTS
 - macOS >= Big Sur
 
-#### Install and apply first
+#### Install and apply
 
 - SAEMC's [iTerm2-Configs](https://github.com/SAEMC/iTerm2-Configs.git)
 - SAEMC's [Tmux-Configs](https://github.com/SAEMC/Tmux-Configs)
 
 ### (Optional) Install `sudo` and `git`
 
-- If you'd never installed, run the following command first
+- If you'd never installed, run the following command
 
 ```shell
 apt-get update && apt-get install -y sudo git
@@ -64,19 +64,19 @@ cd .. && rm -r ./Nvim-Configs/
 ./nvim_configs.sh -a
 ```
 
-#### Install dependencies only
+#### Install dependencies
 
 ```shell
 ./nvim_configs.sh -d
 ```
 
-#### Install NvChad only
+#### Install NvChad
 
 ```shell
 ./nvim_configs.sh -n
 ```
 
-#### Install SAEMC only
+#### Install SAEMC
 
 ```shell
 ./nvim_configs.sh -s
