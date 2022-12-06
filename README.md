@@ -2,12 +2,21 @@
 
 ## Prerequisites
 
-### (Recommended) Apply SAEMC's [iTerm2](https://github.com/SAEMC/iTerm2-Configs.git) and [Tmux](https://github.com/SAEMC/Tmux-Configs) configs first
+### Recommended
 
-### (Ubuntu only) Install `sudo` and `git`
+#### OS version
 
-- Ubuntu version >= 20.04 LTS
-- Run the following command for installation only first time
+- Ubuntu >= 20.04 LTS
+- macOS >= Big Sur
+
+#### Install and apply first
+
+- SAEMC's [iTerm2-Configs](https://github.com/SAEMC/iTerm2-Configs.git)
+- SAEMC's [Tmux-Configs](https://github.com/SAEMC/Tmux-Configs)
+
+### (Optional) Install `sudo` and `git`
+
+- If you'd never installed, run the following command first
 
 ```shell
 apt-get update && apt-get install -y sudo git
@@ -17,30 +26,57 @@ apt-get update && apt-get install -y sudo git
 
 ```shell
 git clone https://github.com/SAEMC/Nvim-Configs && \
-cd ./Nvim-Configs
+cd ./Nvim-Configs/
 ```
+
+<br/>
 
 ## Installation
 
-### Install
+- [Neovim](https://github.com/neovim/neovim) version >= v0.8.0 (will be installed if you install dependencies)
+- Enter following command: `./nvim_configs.sh [OPTION]` (must be in `Nvim-Configs` directory)
 
-- Neovim version >= v0.8.0
-- `$ ./nvim_configs.sh -a` -> Install dependencies & [NvChad](https://github.com/NvChad/NvChad)
-- `$ ./nvim_configs.sh -d` -> Install dependencies only
-- `$ ./nvim_configs.sh -n` -> Install NvChad only
-- `$ ./nvim_configs.sh -s` -> Install SAEMC only
+### Recommended
 
-```shell
-./nvim_configs.sh [OPTIONS]
-```
-
-- (Recommended) Install dependencies and NvChad
+- Install dependencies & [NvChad](https://github.com/NvChad/NvChad) first
 
 ```shell
 ./nvim_configs.sh -a
 ```
 
-- (Recommended: Install dependencies and NvChad first then) Install SAEMC only
+- And then install SAEMC only
+
+```shell
+./nvim_configs.sh -s
+```
+
+- Finally remove this repository
+
+```shell
+cd .. && rm -r ./Nvim-Configs/
+```
+
+### Install partially
+
+#### Install dependencies & NvChad
+
+```shell
+./nvim_configs.sh -a
+```
+
+#### Install dependencies only
+
+```shell
+./nvim_configs.sh -d
+```
+
+#### Install NvChad only
+
+```shell
+./nvim_configs.sh -n
+```
+
+#### Install SAEMC only
 
 ```shell
 ./nvim_configs.sh -s
@@ -48,38 +84,41 @@ cd ./Nvim-Configs
 
 ### Activate dependencies in current shell
 
-- If Ubuntu
+#### Ubuntu
 
 ```shell
 source ~/.bashrc
 ```
 
-- If Mac
+#### macOS
 
 ```shell
 source ~/.zshrc
 ```
 
-### (Optional) Install where in Docker env at once
+### Remove this repository
 
 ```shell
-apt-get update && apt-get install -y sudo git && \
-git clone https://github.com/SAEMC/Nvim-Configs && \
-cd ./Nvim-Configs && \
-./nvim_configs.sh -a
+cd .. && rm -r ./Nvim-Configs/
 ```
 
 <br/>
 
 ## Sync plugins and apply configs
 
+### Recommended
+
+```shell
+nvim +PackerSync +MasonInstallAll
+```
+
 ### Sync plugins (with additional plugins below)
 
-- [iron.nvim](https://github.com/hkupty/iron.nvim) (is for throwing Python codes of `*.py` to IPython)
-- [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim) (is for formatting entire codes of current file on save)
-- [nvim-scrollview](https://github.com/dstein64/nvim-scrollview) (is for displaying interactive vertical scrollbars)
-- [nvim-osc52](https://github.com/ojroques/nvim-osc52) (is for yanking codes into system clipboard)
-- [vim-surround](https://github.com/tpope/vim-surround) (is for surrounding codes with a pair of special characters: `''`, `""`, `()`, `{}`, `[]`, and etc.)
+- [iron.nvim](https://github.com/hkupty/iron.nvim) (is to throw codes of script languages such as Python to the REPL)
+- [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim) (is to format entire codes of current file on save)
+- [nvim-scrollview](https://github.com/dstein64/nvim-scrollview) (is to display interactive vertical scrollbars)
+- [nvim-osc52](https://github.com/ojroques/nvim-osc52) (is to yank codes into system clipboard)
+- [vim-surround](https://github.com/tpope/vim-surround) (is to surround codes with a pair of specifig characters: `''`, `""`, `()`, `{}`, `[]`, and etc.)
 
 ```shell
 nvim +PackerSync
@@ -87,14 +126,8 @@ nvim +PackerSync
 
 ### Apply [Mason](https://github.com/williamboman/mason.nvim) configs
 
-- If unable to install LSP -> Check dependencies such as `npm`, `go`, and etc.
-
 ```shell
 nvim +MasonInstallAll
 ```
 
-### (Optional) Sync and apply at once
-
-```shell
-nvim +PackerSync +MasonInstallAll
-```
+- If unable to install LSPs -> Check dependencies: `npm`, `go`, and etc.
