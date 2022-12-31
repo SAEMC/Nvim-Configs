@@ -13,6 +13,7 @@ local servers = {
   "jsonls",
   "marksman",
   "pyright",
+  "rust_analyzer",
   "tsserver",
   "vimls",
   "yamlls",
