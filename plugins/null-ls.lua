@@ -19,6 +19,7 @@ local sources = {
   b.formatting.rustfmt,
   b.formatting.shfmt,
   b.formatting.stylua,
+  b.formatting.taplo,
 }
 
 -- Format on Save
