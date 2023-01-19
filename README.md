@@ -1,6 +1,6 @@
 # SAEMC's Nvim-Configs
 
-You'd better use [VSCode](https://code.visualstudio.com/), but I'm willing to update this repository because it is worth it for using [Nvim](https://neovim.io/) in Terminal such as [iTerm2](https://iterm2.com/).
+You'd better use [VSCode](https://github.com/microsoft/vscode), but I'm willing to update this repository because it is worth it for using [Neovim](https://github.com/neovim/neovim) in Terminal such as [iTerm2](https://github.com/gnachman/iTerm2).
 
 <br/>
 
