@@ -1,4 +1,4 @@
-# SAEMC's Nvim-Configs
+# SAEMC's Nvim-Configs (You'd better use [VSCode](https://code.visualstudio.com/))
 
 ## Prerequisites
 
