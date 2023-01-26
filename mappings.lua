@@ -150,7 +150,7 @@ M.abc = {
 M.general = {
   i = {
     ["<C-d>"] = {
-      'col(".") < col("$") ? "<C-o>x" : "<Right>"',
+      'col(".") < col("$") ? "<C-o>x" : "<Esc>,<S-j>a"',
       opts = { expr = true },
       "[GENERAL] remove a character after cursor",
     },
