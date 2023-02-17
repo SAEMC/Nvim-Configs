@@ -238,21 +238,20 @@ alias vim="nvim"
 EOF
 		fi
 
-		#Check Node
+		# Check Node
 		eval "$check_node"
 		if [[ "$?" -ne 0 ]]; then
 
 			# Check NVM
 			eval "$check_nvm"
 			if [[ "$?" -ne 0 ]]; then
-				# Install NVM
-				echo -e "\n *** Install NVM *** \n"
-				/bin/zsh -c "brew install nvm"
-				mkdir ${HOME}/.nvm
-
-				export NVM_DIR="$HOME/.nvm"
-				[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-				[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+				# Install NVM manually
+				echo -e "\n *** Install NVM manually *** \n"
+				export NVM_DIR="$HOME/.nvm" && (
+					git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
+					cd "$NVM_DIR"
+					git checkout $(git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1))
+				) && \. "$NVM_DIR/nvm.sh"
 
 				# Write NVM path into ~/.zshrc
 				echo -e "\n *** Write NVM path into ~/.zshrc *** \n"
@@ -261,9 +260,9 @@ EOF
 # NVM
 export NVM_DIR="\$HOME/.nvm"
 # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "\$NVM_DIR/nvm.sh" ] && \. "\$NVM_DIR/nvm.sh"
 # This loads nvm bash_completion
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+[ -s "\$NVM_DIR/bash_completion" ] && \. "\$NVM_DIR/bash_completion"
 EOF
 			fi
 
