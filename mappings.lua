@@ -180,10 +180,6 @@ M.general = {
     },
   },
   n = {
-    ["<ESC>"] = {
-      "<cmd> noh <CR>",
-      "[GENERAL] no highlight",
-    },
     ["<Up>"] = {
       'v:count || mode(1)[0:1] == "no" ? "k" : "gk"',
       opts = { expr = true },
@@ -223,6 +219,10 @@ M.general = {
     ["<C-l>"] = {
       "<C-w>l",
       "[GENERAL] window right",
+    },
+    ["<C-[>"] = {
+      "<cmd> noh <CR>",
+      "[GENERAL] no highlight",
     },
     ["<leader>i"] = {
       "<cmd> w !diff % -<CR>",
